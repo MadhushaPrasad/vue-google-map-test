@@ -6,7 +6,7 @@ Vue.config.productionTip = false;
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyA8YNqOcYThvHB4ePTi49xAAkDxsV88JpU',
+    key: 'hjhasdyedhagdjarrwqjlajlkjasas',
   },
 });
 

@@ -5,7 +5,7 @@
     <button @click="clearMap">clear map</button>
     <GmapMap
       :center="{ lat: 10, lng: 10 }"
-      :zoom="7"
+      :zoom="17"
       map-type-id="terrain"
       style="width: 1000px; height: 300px"
       @click="markLocation($event)"
@@ -18,6 +18,8 @@
         :draggable="true"
         @click="center = m.position"
       />
+
+      <gmap-polygon :paths="paths"></gmap-polygon>
     </GmapMap>
   </div>
 </template>
@@ -28,8 +30,8 @@ const home = {
   lng: -2.249097,
 };
 const work = {
-  lat: 53.464144,
-  lng: -2.249828,
+  lat: 43.642567,
+  lng: -3.244612,
 };
 
 export default {
@@ -37,6 +39,7 @@ export default {
   data() {
     return {
       markers: [],
+      paths: [],
     };
   },
 
@@ -55,24 +58,19 @@ export default {
       console.log(event.latLng.lng());
     },
 
+    //mark home and work points
     drowMarkers() {
       this.markers = [
         {
           position: home,
-          label: 'Home',
         },
         {
           position: work,
-          label: 'Work',
         },
       ];
     },
-    drowDerections() {
-      alert('drowDerections');
-    },
-    clearMap() {
-      alert('clearMap');
-    },
+
+    
   },
 };
 </script>
