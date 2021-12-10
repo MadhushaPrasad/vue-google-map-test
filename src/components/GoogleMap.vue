@@ -69,8 +69,10 @@ export default {
         },
       ];
     },
-
-    
+    //drow line between two points
+    drowDerections() {
+      this.paths = [home, work];
+    },
   },
 };
 </script>
