@@ -73,6 +73,12 @@ export default {
     drowDerections() {
       this.paths = [home, work];
     },
+
+    //clear map
+    clearMap() {
+      this.paths = [];
+      this.markers = [];
+    },
   },
 };
 </script>
